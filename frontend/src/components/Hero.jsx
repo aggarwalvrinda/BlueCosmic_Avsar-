@@ -8,7 +8,7 @@ const Hero = () => {
     <section id="home" className={`flex md:-mt-[100px] md:flex-row flex-col ${styles.paddingY}`}>
       <div className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}>
         <div className="flex flex-row items-center py-[6px] px-4 bg-discount-gradient rounded-[10px] mb-2">
-          <img src={boticon} alt="boticon" className="bg-white rounded-3xl w-[32px] h-[32px]" />
+          <img src={boticon} alt="boticon" className="cursor-pointerr bg-white rounded-3xl w-[32px] h-[32px]" />
           <p className={`${styles.paragraph} ml-2`}>
 
             <span className="text-white">Interview Voice Bot</span> 
@@ -24,7 +24,7 @@ const Hero = () => {
             with <span className="text-gradient">AVSAR</span>{" "}
           </h1>
           <div className="ss:flex hidden md:mr-4 mr-0">
-            <GetStarted />
+            <Link to='/chat' ><GetStarted /> </Link>
           </div>
         </div>
 
@@ -51,6 +51,7 @@ const Hero = () => {
       </div>
       <button onclick="buttonHandler()" title="Chat Bot"
         class="fixed z-90 bottom-10 right-8 bg-sky-500 w-20 h-20 rounded-full drop-shadow-lg flex justify-center items-center text-white text-4xl hover:bg-blue-700 hover:drop-shadow-2xl hover:animate-bounce duration-300">
+         {/* Chat bot page linked through right side icon */}
           <Link to='/chat'><img src={boticon} alt="chat"/></Link>
         </button>
     </section>

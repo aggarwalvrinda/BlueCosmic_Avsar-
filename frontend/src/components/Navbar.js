@@ -12,7 +12,7 @@ const Navbar = () => {
 
     return (
         <nav className=" bg-primary -ml-16 w-full flex py-6 justify-between items-center navbar">
-      <img src={avsarlogo} alt="peacify" className=" w-[204px] h-[50px] pl-5" />
+      <Link to='/'> <img src={avsarlogo} alt="peacify" className=" w-[204px] h-[50px] pl-5" /> </Link>
 
                 <ul className={` ${nav ? 'nav-menu active' : 'nav-menu'}`}>
                     <li ><Link  to='/'>Home</Link></li>
