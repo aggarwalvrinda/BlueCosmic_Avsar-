@@ -133,7 +133,7 @@ if __name__=="__main__":
         root.geometry("{}x{}+{}+{}".format(920,360,int(root.winfo_screenwidth()/2 - 920/2),int(root.winfo_screenheight()/2 - 360/2)))
         root.resizable(0,0)
         root.title("Avsar")
-        #root.iconbitmap('Dork.ico')
+        root.iconbitmap('Avsar.ico')
         root.configure(bg='#2c4557')
         scrollable_text=scrolledtext.ScrolledText(root,state='disabled',height=15,width=87,relief='sunken',bd=5,wrap=tk.WORD,bg='#add8e6',fg='#800000')
         scrollable_text.place(x=10,y=10)

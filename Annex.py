@@ -12,6 +12,7 @@ import tkinter.scrolledtext as scrolledtext
 from functools import partial
 import tkinter.messagebox as tmsg,sqlite3
 
+
 class SpeakRecog:
 
     def __init__(self,scrollable_text):
