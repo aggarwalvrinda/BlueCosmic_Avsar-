@@ -29,21 +29,21 @@ export const features = [
     icon: technical,
     title: "Technical",
     content:
-      "The best credit cards offer some tantalizing combinations of promotions and prizes",
+      "In these interviews, you will have to prove that you have the necessary skills and abilities to handle the job responsibilities and meet the company's expectations.",
   },
   {
     id: "feature-2",
     icon: management,
     title: "Management",
     content:
-      "We take proactive steps make sure your information and transactions are secure.",
+      "This interview will focus primarily on your leadership skills and experience, but an interviewer will also ask questions about your background, qualifications and communication skills. You will also be asked to describe how you have dealt with conflict in the past.",
   },
   {
     id: "feature-3",
     icon: technical,
     title: "University",
     content:
-      "A balance transfer credit card can save you a lot of money in interest charges.",
+      "These interviews will involve a discussion between you and the course tutor for your chosen subject. You'll be asked to discuss why you want to study the course and what makes you a strong candidate.",
   },
 ];
 
@@ -51,25 +51,25 @@ export const feedback = [
   {
     id: "feedback-1",
     content:
-      "Money is only a tool. It will take you wherever you wish, but it will not replace you as the driver.",
+      "I've been using this AVSAR to handle customer inquiries for my business, and it's been a game-changer. AVSAR is incredibly intuitive and can handle a wide variety of inquiries. It's freed up my staff to focus on more complex tasks, and our customers love the quick and efficient service.",
     name: "Herman Jensen",
-    title: "Founder & Leader",
+    title: "Founder",
     img: people01,
   },
   {
     id: "feedback-2",
     content:
-      "Money makes your life easier. If you're lucky to have it, you're lucky.",
+    "I was skeptical about using a AVSAR for customer service, but after trying this one, I'm a believer. AVSAR responses are incredibly natural and human-like, and it can handle complex inquiries with ease. I'm so impressed by how much time and resources it's saved my company.",
     name: "Steve Mark",
-    title: "Founder & Leader",
+    title: "Leader",
     img: people02,
   },
   {
     id: "feedback-3",
     content:
-      "It is usually people in the money business, finance, and international trade that are really rich.",
+    "AVSAR has been a lifesaver for my busy schedule. It can handle everything from scheduling appointments to ordering groceries, and it's so easy to use. I love that I can just speak my requests, and the bot takes care of the rest. I highly recommend this to anyone who needs a virtual assistant.",
     name: "Kenn Gallagher",
-    title: "Founder & Leader",
+    title: "Manager",
     img: people03,
   },
 ];
@@ -87,7 +87,7 @@ export const stats = [
   },
   {
     id: "stats-3",
-    title: "Transaction",
+    title: "Interviews",
     value: "$230M+",
   },
 ];

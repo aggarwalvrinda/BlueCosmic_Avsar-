@@ -1,5 +1,6 @@
 import { features } from "../constants";
 import styles, { layout } from "../style";
+import {Link} from 'react-router-dom'
 import LearnMore from "./LearnMore";
 
 const FeatureCard = ({ icon, title, content, index }) => (
@@ -42,7 +43,7 @@ const Business = () =>  (
     
     
   </section>
-  {<LearnMore styles={`mt-[16px] `} />}
+  <Link to='/chat'> {<LearnMore styles={`mt-[16px] `} />} </Link>
   </div>
   
 );
