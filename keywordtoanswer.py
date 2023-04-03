@@ -103,7 +103,7 @@ def mainframe():
 
 
     SR.speak("nice to meet you")
-    SR.speak("nice to meet you")
+
 
 
 def clearScreen():
