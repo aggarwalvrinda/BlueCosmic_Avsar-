@@ -1,27 +1,16 @@
-# Import flask and datetime module for showing date and time
-from flask import render_template,Flask
-from werkzeug.serving import run_simple
-import datetime
+from flask import Flask, render_template, jsonify, request
+import speech_recognition as sr
 
-x = datetime.datetime.now()
-
-# Initializing flask app
 app = Flask(__name__)
 
 
-# Route for seeing a data
-@app.route('/data')
-def get_time():
-
-	# Returning an api for showing in reactjs
-	return {
-		'Name':"geek",
-		"Age":"22",
-		"Date":x,
-		"programming":"python"
-		}
-
-	
-# Running app
+@app.route('/voice-input', methods=['POST'])
+def handle_voice_input():
+  input = request.json['input']
+  # Do something with the voice input
+  return jsonify({'status': 'success'})
 if __name__ == '__main__':
-    run_simple('localhost', 5000, app)
+ 
+    # run() method of Flask class runs the application
+    # on the local development server.
+    app.run()

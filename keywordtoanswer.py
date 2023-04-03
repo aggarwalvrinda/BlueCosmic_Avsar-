@@ -15,7 +15,7 @@ from flask import Flask,render_template
 import Annex
 from functools import partial
 import urllib.request,bs4 as bs,sys,threading
-
+from flask import Flask
 import speech_recognition as sr
 from gtts import gTTS
 
@@ -64,40 +64,42 @@ def mainframe():
     SR.takeCommand()
     text=get_audio()
 
-    r = Rake()
-    file = open('dataset.csv')
-    csvreader = csv.reader(file)
-    header = []
-    header = next(csvreader)
-    print(header)
-    rows = []
-    for row in csvreader:
-         rows.append(row)
+    
 
-    print(rows)
-
+    with open('dataset.csv', encoding='utf-8') as csv_file:
+        csv_reader = csv.reader(csv_file, delimiter=',')
+        rows = list(csv_reader)
 
     SR.takeCommand()
     text=get_audio()
 
-    for qno in range(0,3):
-        index = randint(0,29)
-        question =rows[index][0]
+    
+        
+
+
+
+    
+
+    for qno in range(3):
+        index = randint(0, len(rows) - 1)
+        question = rows[index][0]
         SR.speak(question)
         #SR.runAndWait()
         answer = rows[index][1]
         SR.speak("Give answer")
+        SR.takeCommand()
         text = get_audio()
-        r=Rake()
+        r = Rake()
         r.extract_keywords_from_text(answer)
+        
 
         for rating,keyword in r.get_ranked_phrases_with_scores():
             ans = keyword.split()
             for keyword1 in ans:
                 if keyword1 not in text:
-                    SR.speak("please speak this keyword too",keyword1)
+                    SR.speak("please speak this keyword "+keyword1)
             if rating > 5:
-                SR.speak(rating, ans)
+                SR.speak(str(rating)+" "+ str(ans))
 
 
     SR.speak("nice to meet you")
@@ -126,7 +128,9 @@ def Launching_thread():
     MainframeThread_object=MainframeThread(Thread_ID.__next__(),"Mainframe")
     MainframeThread_object.start()
 
+
 if __name__=="__main__":
+        
         #tkinter code
         root=themed_tk.ThemedTk()
         root.set_theme("winnative")
@@ -154,5 +158,6 @@ if __name__=="__main__":
         myMenu.add_cascade(label="Clear Screen",command=clearScreen)
         root.config(menu=myMenu)
         root.mainloop()
+        
 
 
