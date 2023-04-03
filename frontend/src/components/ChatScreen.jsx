@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import styles from "../style";
 import  { layout } from "../style";
 import{fullscreen, chatscreenicon,   endcall, video, sound,} from '../assets'
 
@@ -34,8 +35,8 @@ function ChatScreen () {
             
       </form>
   </div>
-<div class="inline-flex  rounded-3xl outline shadow-xl ml-[14cm] mb-20"  role="group">
-  <button id="record-button"  type="button" class=" inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white">
+<div class="inline-flex px-10 hover:bg-gray-100 rounded-3xl outline shadow-xl ml-[14cm] mb-20"  role="group">
+  {/* <button id="record-button"  type="button" class=" inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white">
   <img className="block mx-auto h-10 px-10 hover:bg-green-700 rounded-full sm:mx-0 sm:shrink-0" alt="sound" src={sound}/>
 
   </button>
@@ -47,13 +48,14 @@ function ChatScreen () {
   <button type="button" class=" inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white">
   <img className="block mx-auto h-10 px-10 hover:bg-red-600 rounded-full sm:mx-0 sm:shrink-0" alt="endcall" src={endcall}/>
 
-  </button>
-  
-</div>
-<div>
-      <button className='bg-primary' onClick={handleClick}>Run Python Script</button>
+  </button> */}
+  <div className='justify-center'>
+      <button className={`  font-bold text-xl hover:bg-gray-100 inline-flex w-52 items-center justify-center px-4 py-2 text-gray-900 bg-white border-t border-b border-gray-200  hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white`} onClick={handleClick}>Start Interview</button>
       <p>{response}</p>
     </div>
+  
+</div>
+
   </section>
   );
 }
