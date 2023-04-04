@@ -91,13 +91,16 @@ def mainframe():
         text = get_audio()
         r = Rake()
         r.extract_keywords_from_text(answer)
-        
-
+        keywordset =[]
         for rating,keyword in r.get_ranked_phrases_with_scores():
             ans = keyword.split()
             for keyword1 in ans:
                 if keyword1 not in text:
-                    SR.speak("please speak this keyword "+keyword1)
+                    keywordset.append(keyword1)
+        keywordset = set(keywordset)
+                    
+        for keyword in keywordset:
+            SR.speak("please speak this keyword "+keyword)
             
     SR.speak("nice to meet you")
     
