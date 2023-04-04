@@ -1,0 +1,30 @@
+Modules Used in Avsar:
+
+pip install pyautogui
+pip install pyttsx3
+pip install speech_recognition
+pip install pywhatkit
+pip install scipy
+pip install tkinter
+pip install ttkthemes
+pip install functools
+pip install flask
+pip install PIL
+pip install rake_nltk
+pip install gtts
+pip install requests
+pip install sounddevice
+pip install playsound
+pip install urllib3
+pip install bs4
+pip install wheel
+pip install google-api-python-client
+pip install monotonic
+pip install threaded
+pip install pysqlite3
+pip install db-sqlite3
+
+For installation of pyaudio
+pip intall pipwin
+pipwin install pyaudio
+pip install --upgrade pyaudio
