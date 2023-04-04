@@ -1,5 +1,4 @@
 
-
 # Avsar
 
 Avsar is an AI-powered interview simulator bot that helps job seekers practice and prepare for interviews. It is a voice-based application that simulates real-world job interviews and provides feedback to the user on their responses.
@@ -23,5 +22,7 @@ Within the Flask file, there is a function named run-script which is responsible
 In this case, the backend uses PyAudio and SpeechRecognition to capture voice input from the user. The input is then converted to text using Pyttsx3, a Python library for speech synthesis.
 
 The text is then analyzed using Natural Language Processing (NLP) techniques to identify keywords that could enhance the answer. This could involve identifying topics, entities, or sentiment within the text, and using this information to provide a more relevant response.
+
+Used Firebase to provide sign in with google feature to enhance the user experience
 
 Overall, the architecture of the code you described involves a frontend-backend separation of concerns, with the frontend handling user interaction and the backend handling data processing and computation. The backend also employs various libraries and modules to perform different tasks, including PyAudio, SpeechRecognition, Pyttsx3, and NLP techniques.
