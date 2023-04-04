@@ -98,12 +98,9 @@ def mainframe():
             for keyword1 in ans:
                 if keyword1 not in text:
                     SR.speak("please speak this keyword "+keyword1)
-            if rating > 5:
-                SR.speak(str(rating)+" "+ str(ans))
-
-
+            
     SR.speak("nice to meet you")
-
+    
 
 
 def clearScreen():
